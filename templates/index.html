@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        body,h1 {font-family: "Raleway", sans-serif; color:rgba(255, 0, 0, 0.87); font-weight: bold; }
+        body, html {height: 100% }
+        form{ color:rgb(255, 255, 255);}
+        </style>
+
+</head>
+
+<body style="background-image: url('https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80'); background-size: cover; margin-left: 5%; border:1px solid black;"></bodybody>
+
+    <div class="container">
+<a2>Please fill the parameters below and click on Selling Price button to check car price</a2>
+
+
+        <form action="\predict" method="post">
+       
+            <h3>year</h3><input id="first" name="year" placeholder="eg. like the year '2010' "type="number " >
+        <br>
+        <br>
+            <h3>mpg</h3><input id="second" name="mpg" placeholder="put mpg of car"required="required">
+        <br>  
+        <br>  
+            <h3>mileage</h3><input id="third" name="mileage" placeholder="eg. 10000 Km driven before"required="required">
+        <br>
+        <br>
+            <h3>engineSize</h3><input id="fourth" name="engineSize" placeholder="enigne Size  value" required="required">
+        <br>
+        <br>
+            <h3>tax</h3><input id="fourth" name="tax" placeholder="tax  value" required="required">
+        <br>
+        <br>   
+            
+            <h3>Fuel Type</h3><select name="fuelType_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Other">Diesel</option>
+                <option value="Other">Hybrid</option>
+                <option value="Other">Other</option>
+
+            </select>
+        <br>
+        <br>
+            <h3>Transmission Type</h3><select name="transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+                <option value="Automatic">SemiAuto</option>
+            </select>
+            
+            <br><br><button id="sub" type="submit ">Selling Price</button>
+        </form>
+        <h3>{{ prediction_text }}<h3>
+        <br>
+    </div>
+        
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+
+   <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/BashitaliShaikh"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/bashitali-shaikh-3b590616a/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Bashit Ali Shaikh.</p>
+       </div>
+
+
+</body>
+
+</html>
